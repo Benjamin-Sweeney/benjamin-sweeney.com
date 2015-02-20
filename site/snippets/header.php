@@ -27,6 +27,7 @@
 
   <?php snippet('artdirection') ?>
   <?php snippet('typekit') ?>
+  <?php snippet('analyticstracking') ?>
 
 </head>
 <body>

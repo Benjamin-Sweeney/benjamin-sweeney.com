@@ -19,7 +19,5 @@
   </footer>
   <?php echo js('assets/js/build/production.min.js') ?>
 
-  <?php snippet('connect') ?>
-
 </body>
 </html>
