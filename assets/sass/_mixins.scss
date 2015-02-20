@@ -1,0 +1,47 @@
+@mixin grid($columns, $span, $gutter, $prepend: 0, $append: 0, $last: 0) {
+	float: left;
+	width: ((100% - ((( $columns / $span ) - 1) * $gutter)) / ( $columns / $span ));
+	@if $last != 0 { margin: 0; } @else { margin-right: $gutter; }
+	@if $span < $columns { &:nth-of-type(#{($columns/$span)}n){ margin-right: 0; } }
+	@if $append != 0 { margin-right: $append * (((100% - ($gutter * ($columns - 1))) / $columns) + $gutter); }
+	@if $prepend != 0 { margin-left: $prepend * (((100% - ($gutter * ($columns - 1))) / $columns) + $gutter); }
+}
+
+@mixin last(){
+	margin-right: 0;
+}
+@mixin small{
+  font-size: .75em;
+}
+$layout-main-0: 0 2em;
+$layout-main-1: 0 4em;
+
+%layout-main{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 2em;
+  @media screen and (min-width: 600px){ width: 100%; padding: 0 4em;}
+  @media screen and (min-width: 800px){ padding: 0 2em;}
+  @media screen and (min-width: 1000px){ padding: 0 4em;}
+  @media screen and (min-width: 1160px){ width: 1000px; padding: 0; margin: 0 auto;}
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+%vertical-align {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+%vertical-align-parent {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
