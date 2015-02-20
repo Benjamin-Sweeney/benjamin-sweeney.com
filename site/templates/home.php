@@ -26,9 +26,13 @@
     <div class="text">
       <?php echo $page->text()->kirbytext() ?>
     </div>
+  <?php if(page('writing')->isVisible()): ?>
     <?php snippet('writings') ?>
     <hr>
+  <?php endif ?>
+  <?php if(page('projects')->isVisible()): ?>
     <?php snippet('projects') ?>
+  <?php endif ?>
 
   </main>
 
