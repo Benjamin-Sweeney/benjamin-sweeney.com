@@ -16,7 +16,7 @@
   <?php echo css('assets/css/main.css') ?>
 
   <?php if($page->id() == 'home'): ?>
-    <?php echo js('assets/js/build/home.js') ?>
+    <?php echo js('assets/js/build/home.min.js') ?>
   <?php else: ?>
     <?php echo js('assets/js/build/production.min.js') ?>
   <?php endif ?>
