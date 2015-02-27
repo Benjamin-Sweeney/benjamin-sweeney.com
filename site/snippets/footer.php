@@ -2,7 +2,7 @@
   	<a href="#top"><span class="to-top">Top</span></a>
 	<section class="contact">
 		<h1>Contact Me</h1>
-		<p>I enjoy working with people who are passionate about what they do. <br> Please feel free to email me if you have a project you'd like work with me on.</p>
+		<p>I enjoy working with people who are passionate about what they do. <br> Please feel free to email me if you have a project you'd like to work on together.</p>
 		<p><a href="mailto:ben@benjamin-sweeney.com" class="email">ben@benjamin-sweeney.com</a></p>
 	</section>
 	<section class="social">
@@ -17,7 +17,7 @@
       <?php echo $site->copyright()->kirbytext() ?>
     </div>
   </footer>
-  <?php echo js('assets/js/build/production.min.js') ?>
+  <script>var nav = responsiveNav(".nav-collapse",{insert: false ,customToggle: "nav-toggle"});</script>
 
 </body>
 </html>

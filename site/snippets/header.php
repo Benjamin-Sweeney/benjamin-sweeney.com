@@ -18,7 +18,7 @@
   <?php if($page->id() == 'home'): ?>
     <?php echo js('assets/js/build/home.js') ?>
   <?php else: ?>
-    <?php echo js('assets/js/production.js') ?>
+    <?php echo js('assets/js/build/production.min.js') ?>
   <?php endif ?>
 
   <?php if($page->heroCover() !='' || $page->heroCover() !='0' || $page->customColor() !='' || $page->customColor() !='0'): ?>
@@ -33,9 +33,12 @@
 <body>
 
   <header class="header" role="banner" id="top">
-    <a class="logo" href="<?php echo url() ?>">
-      <h1>Benjamin Sweeney</h1>
-    </a>
+    <div>
+      <a href="#" id="nav-toggle" class="nav-toggle" aria-hidden="false">Menu</a>
+      <a class="logo" href="<?php echo url() ?>">
+        <h1>Benjamin Sweeney</h1>
+      </a>
+    </div>
     <?php snippet('menu') ?>
   </header>
 
