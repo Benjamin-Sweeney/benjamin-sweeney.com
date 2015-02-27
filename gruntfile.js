@@ -51,7 +51,7 @@ browserSync: {
           concat: {
             basic_and_extras: {
               files: {
-                'assets/js/build/production.js': ['assets/js/*.js'],
+                'assets/js/build/production.js': ['assets/js/production/*.js'],
                 'assets/js/build/home.js': ['assets/js/home/*.js'],
               },
             },
@@ -63,7 +63,11 @@ browserSync: {
             build: {
                 src: 'assets/js/build/production.js',
                 dest: 'assets/js/build/production.min.js'
-            }
+            },
+            home: {
+                src: 'assets/js/build/home.js',
+                dest: 'assets/js/build/home.min.js'
+            },
         },
 
         sass: {
